@@ -1,0 +1,78 @@
+/* Estilos para dispositivos de escritorio */
+header {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	background-color: #333;
+	color: #fff;
+	padding: 10px 20px;
+}
+
+.logo a {
+	color: #fff;
+	font-size: 24px;
+	font-weight: bold;
+	text-decoration: none;
+}
+
+nav ul.menu {
+	display: flex;
+	list-style: none;
+	margin: 0;
+	padding: 0;
+}
+
+nav ul.menu li {
+	margin: 0 10px;
+}
+
+nav ul.menu li a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.icon {
+	display: none;
+}
+
+/* Estilos para dispositivos móviles */
+@media screen and (max-width: 600px) {
+	nav {
+		flex-direction: column;
+		align-items: flex-start;
+	}
+
+	nav ul.menu {
+		display: none;
+	}
+
+	.icon {
+		display: block;
+		font-size: 24px;
+		margin-right: 20px;
+		cursor: pointer;
+	}
+
+	.icon i {
+		color: #fff;
+	}
+
+	nav.active ul.menu {
+		display: flex;
+		flex-direction: column;
+		background-color: #333;
+		position: absolute;
+		top: 100%;
+		left: 0;
+		right: 0;
+	}
+
+	nav.active ul.menu li {
+		margin: 10px;
+	}
+
+	nav.active ul.menu li a {
+		color: #fff;
+		text-align: center;
+	}
+}
